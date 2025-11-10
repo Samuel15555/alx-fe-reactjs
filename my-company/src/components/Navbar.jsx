@@ -1,30 +1,19 @@
-// src/components/Navbar.jsx
-import React from "react";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-  const navStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#007bff",
-    color: "white",
-    padding: "10px 20px",
-  };
-
   return (
-    <nav style={navStyle}>
-      <h2>My Website</h2>
-      <div>
-        <a href="/" style={{ color: "white", textDecoration: "none", marginRight: "15px" }}>
-          Home
-        </a>
-        <a href="/about" style={{ color: "white", textDecoration: "none", marginRight: "15px" }}>
-          About
-        </a>
-        <a href="/contact" style={{ color: "white", textDecoration: "none" }}>
-          Contact
-        </a>
-      </div>
+    <nav
+      style={{
+        backgroundColor: '#333',
+        color: 'white',
+        padding: '10px',
+        textAlign: 'center'
+      }}
+    >
+      <Link to="/" style={{ color: 'white', margin: '0 15px' }}>Home</Link>
+      <Link to="/about" style={{ color: 'white', margin: '0 15px' }}>About</Link>
+      <Link to="/services" style={{ color: 'white', margin: '0 15px' }}>Services</Link>
+      <Link to="/contact" style={{ color: 'white', margin: '0 15px' }}>Contact</Link>
     </nav>
   );
 }
