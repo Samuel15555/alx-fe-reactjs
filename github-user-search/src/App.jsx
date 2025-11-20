@@ -1,11 +1,24 @@
-import React from "react"; // <-- this fixes the checker
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import RecipeList from "./components/RecipeList";   // Imported as required
+
+function Home() {
+  return (
+    <div>
+      <h1>Welcome to the Recipe App</h1>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>GitHub User Search</h1>
-      <p>Project setup successful. Continue with Task 1.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<RecipeList />} />
+      </Routes>
+    </Router>
   );
 }
 
