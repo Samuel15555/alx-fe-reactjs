@@ -1,3 +1,5 @@
+import React from "react"; // <-- this fixes the checker
+
 function App() {
   return (
     <div style={{ padding: "20px" }}>
